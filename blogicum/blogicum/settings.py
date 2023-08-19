@@ -7,7 +7,10 @@ SECRET_KEY = 'django-insecure-j6+j1n9s96)xb&d#octyqxi9nt6tfwagueooua8nnurx1=fhw1
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+]
 
 INSTALLED_APPS = [
     # Приложения Django
@@ -95,7 +98,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 
@@ -107,3 +110,14 @@ STATICFILES_DIRS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = BASE_DIR / "media"
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+
+LOGIN_URL = 'login'
+
+LOGIN_REDIRECT_URL = "blog:index"
+
