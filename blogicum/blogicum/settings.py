@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_bootstrap5",
 
     # Локальные приложения
     'pages.apps.PagesConfig',
@@ -111,7 +112,7 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_FAILURE_VIEW = "core.views.csrf_failure"
+CSRF_FAILURE_VIEW = "pages.views.csrf_failure"
 
 MEDIA_ROOT = BASE_DIR / "media"
 
