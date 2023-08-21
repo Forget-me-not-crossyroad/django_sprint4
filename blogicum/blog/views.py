@@ -157,7 +157,7 @@ class UsersPostsView(PostListView):
         username = self.kwargs["username"]
         self.author = get_object_or_404(User, username=username)
         if self.author == self.request.user:
-            return (Post.objects.select_related("category", "location", "author",).annotate(comment_count=Count("comments")).order_by("-pub_date")).filter(author=self.author)
+            return post_all_query().filter(author=self.author)
         return super().get_queryset().filter(author=self.author)
 
     def get_context_data(self, **kwargs):
