@@ -1,21 +1,16 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
+from django.db.models import Count
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse, reverse_lazy
-from django.utils.timezone import now
-from django.views.generic import (
-    ListView,
-    DetailView,
-    UpdateView,
-    CreateView,
-    DeleteView,
-)
-
-from .models import Post, User, Category, Comment
-from .forms import UserEditForm, PostEditForm, CommentEditForm
-from django.views import View
-from django.db.models import Count
 from django.utils import timezone
+from django.utils.timezone import now
+from django.views import View
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
+
+from .forms import CommentEditForm, PostEditForm, UserEditForm
+from .models import Category, Comment, Post, User
 
 
 def post_all_query():
