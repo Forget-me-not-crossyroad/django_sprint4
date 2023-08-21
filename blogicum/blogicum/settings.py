@@ -8,8 +8,8 @@ SECRET_KEY = 'django-insecure-j6+j1n9s96)xb&d#octyqxi9nt6tfwagueooua8nnurx1=fhw1
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
+    'localhost',
+    '127.0.0.1',
 ]
 
 INSTALLED_APPS = [
@@ -112,14 +112,14 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_FAILURE_VIEW = "pages.views.csrf_failure"
+CSRF_FAILURE_VIEW = 'pages.views.csrf_failure'
 
-MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_ROOT = BASE_DIR / 'media'
 
-EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 
-EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
 
 LOGIN_URL = 'login'
 
-LOGIN_REDIRECT_URL = "blog:index"
+LOGIN_REDIRECT_URL = 'blog:index'
