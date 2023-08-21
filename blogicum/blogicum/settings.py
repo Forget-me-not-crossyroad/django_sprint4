@@ -20,7 +20,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_bootstrap5',
 
     # Локальные приложения
     'pages.apps.PagesConfig',
@@ -28,6 +27,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
 
     # Сторонние приложения
+    'django_bootstrap5',
     'debug_toolbar',
 ]
 
