@@ -67,7 +67,7 @@ class CommentMixinView(LoginRequiredMixin, View):
     def get_success_url(self):
         pk = self.kwargs["pk"]
         return reverse("blog:post_detail", kwargs={"pk": pk})
-    
+
 
 class CommentUpdateView(CommentMixinView, UpdateView):
     """Изменение комментария."""
