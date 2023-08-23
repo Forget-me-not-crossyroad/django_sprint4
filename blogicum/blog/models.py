@@ -2,6 +2,8 @@ from core.models import PublishedModel
 from django.contrib.auth import get_user_model
 from django.db import models
 
+PRE_TEXT_LEN: int = 15
+
 User = get_user_model()
 
 
@@ -101,7 +103,7 @@ class Post(PublishedModel):
         ordering = ('title',)
 
     def __str__(self):
-        return self.title
+        return self.title[:PRE_TEXT_LEN]
 
 
 class Comment(models.Model):
